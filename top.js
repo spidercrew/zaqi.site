@@ -20,4 +20,15 @@ function scrollToTop() {
     offsetTop = offset.top;
     $('html, body').animate({scrollTop: offsetTop}, 600, 'linear');
 }
+//
+function blockLinks(parentID, children) {
+ var parent = document.getElementById(parentID),
+ content = parent.getElementsByTagName(children);
+ for (var i = 0; i < content.length; i++) {
+  if (content[i].innerHTML.indexOf('</a>') !== -1) {
+   content[i].innerHTML = content[i].innerHTML.replace(/<a[^>]*>|<\/a>/g, "");  
+  }
+ }
+}
+blockLinks('comments', 'p');
 //]]>
