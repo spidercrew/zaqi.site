@@ -1,31 +1,5 @@
 //<![CDATA[
 $(function(){
-   if ($('#sticky').length) { 
-      var el = $('#sticky');
-      var stickyTop = $('#sticky').offset().top; 
-      var stickyHeight = $('#sticky').height();
-
-      $(window).scroll(function(){
-          var limit = $('#footer').offset().top - stickyHeight - 5;
-
-          var windowTop = $(window).scrollTop();
-
-          if (stickyTop < windowTop){
-             el.css({ position: 'fixed', top: 5 });
-          }
-          else {
-             el.css('position','static');
-          }
-
-          if (limit < windowTop) {
-          var diff = limit - windowTop;
-          el.css({top: diff});
-          }
-        });
-   }
-});
-//
-$(function(){
  
     $(document).on( 'scroll', function(){
  
