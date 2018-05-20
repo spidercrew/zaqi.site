@@ -6,7 +6,7 @@ $(function(){ // document ready
       var stickyHeight = $('#sticky').height();
 
       $(window).scroll(function(){ // scroll event
-          var limit = $('#footer').offset().top - stickyHeight - 5;
+          var limit = $('.Zq-Banner-bts').offset().top - stickyHeight - 0;
 
           var windowTop = $(window).scrollTop(); // returns number
 
